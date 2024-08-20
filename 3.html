@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студия красоты</title>
+    <link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+
+<header>
+    <h1>Студия красоты "Beauty Studio"</h1>
+    <nav>
+        <a onclick="scrollToSection('choos_us')" >О студии</a>
+        <a onclick="scrollToSection('contact')">Контакты</a>
+        <a href="#num">+375 (29) 123-45-67</a>
+    </nav>
+</header>
+
+<div class="banner">
+    <div class="banner-text">
+        <h2>Студия красоты<br>в вашем городе</h2>
+        <button class="button-prices" onclick="scrollToSection('container')">Стоимость услуг</button>
+        <button class="button-book" onclick="scrollToSection('form-group')">Записаться</button>
+
+    </div>
+</div>
+
+<script>
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+
+
+<section id="container">
+<h3>Услуги</h3>
+<div class="container">
+    <div class="column" onclick="openMasterInfo
+    ('Маникюр', 
+    'Маникюр без покрытия (обрезка ногтей/ кутикулы/ обработка кожи вокруг ногтей), Маникюр с покрытием гель-лак, Маникюр с укреплением гелем, Мужской маникюр, Снятие гель-лака без последующего покрытия, Ремонт одного ногтя, Френч', 
+    '35 руб, 60 руб, 60 руб, 50 руб, 60 руб, 10 руб, 10 руб')" >
+        <h2>Маникюр</h2>
+        <p>Аппаратный/обрезной/комбинированный</p>
+        <img src="img/1.jpg" alt="Маникюр"> <!-- Замените на путь к изображению -->
+        <p class="price">от 35 руб</p>
+    </div>
+
+    <div class="column" onclick="openMasterInfo
+    ('Педикюр', 
+    'Обработка пальчиков ног или стоп без покрытия, Педикюр без покрытия (обработка ногтей/ кутикулы/ кожи стоп и пяточек), Педикюр с покрытием гель-лак, Мужской педикюр', 
+    '35 руб, 45 руб, 70 руб, 60 руб')">
+        <h2>Педикюр</h2>
+        <p>Педикюр без покрытия, мужской педикюр и т.д.</p>
+        <img src="img/2.jpg" alt="Европейский маникюр"> <!-- Замените на путь к изображению -->
+        <p class="price">от 35 руб</p>
+    </div>
+
+    <div class="column" onclick="openMasterInfo
+    ('Макияж',
+    'Дневной макияж  (минимальный макияж для ежедневной носки), Вечерний макияж  (макияж для праздничных событий/ вечеринок/ праздников), Свадебный макияж  (макияж для невест), Смоки  (макияж с ярким акцентом на глаза)', 
+    '80 руб, 90 руб, 100 руб, 100 руб')">
+        <h2>Макияж</h2>
+        <p>Дневной, вечерний, свадебный (макияж для невест), смоки</p>
+        <img src="img/3.jpg" alt="Педикюр"> <!-- Замените на путь к изображению -->
+        <p class="price">от 80 руб</p>
+    </div>
+
+    <div class="column" onclick="openMasterInfo
+    ('Прическа', 
+    'Причёски праздничные короткая длина волос (до 15 см), Причёски праздничные средняя длина волос (от 15 см до 35 см), Причёски праздничные на длинные волосы (от 35 см), Локоны, Голливудская волна', 
+    '40 руб, 45 руб , 50 руб, 44 руб, 44 руб')">
+        <h2>Прическа</h2>
+        <p>Локоны, пучок низкий/высокий, волны и т.д.</p>
+        <img src="img/4.jpg" alt="Снятие покрытия"> <!-- Замените на путь к изображению -->
+        <p class="price">от 40 руб</p>
+    </div>
+</section>
+
+
+    <div class="modal2" id="modal" onclick="closeModal()">
+        <div class="modal-content2" onclick="event.stopPropagation();">
+            <span class="close2" onclick="closeModal()">&times;</span>
+            <h2 id="masterName"></h2>
+            
+            <table id="masterServicesTable">
+                <thead>
+                    <tr>
+                        <th>Услуга</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Сюда будет добавлено содержимое таблицы -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+<section id="choos_us">
+        <div class="choos_us">
+            <div class="image">
+                <img src ="img/6.jpg" width="400px">
+            </div>
+            <div class="choos">
+                <h4>О Нас</h4>
+                <p>Студия маникюра предлагает вам аппаратный и комбинированный маникюр, 
+                    покрытие гель-лаком с укреплением, а также наращивание ногтей.<br><br>
+        
+                    Хотите чтобы ваши руки выглядели красиво и ухоженно? Чтобы на ногтях было красивое покрытие:
+                     прозрачное, однотонное, различные рисунки — подходящие под настроение или грядущее событие?<br><br>
+                    
+                    Тогда обращайтесь за маникюром в нашу студию!</p>
+
+                    <button class="button-book2" onclick="scrollToSection('form-group')">Записаться</button>
+            </div>
+        </div>
+    </section>      
+
+
+
+        <h6>Наши мастера</h6> 
+<div class="masters"> 
+    <div class="master" > 
+        <img src="img/master1.jpg" alt="Мастер 1"> 
+        <h2>Инна Иванова</h2> 
+        <p>Маникюр, педикюр</p> 
+    </div> 
+    <div class="master" > 
+        <img src="img/master2.jpg" alt="Мастер 4"> 
+        <h2>Мария Фролова</h2> 
+        <p>Маникюр, педикюр</p> 
+    </div> 
+    <div class="master" > 
+        <img src="img/master3.jpg" alt="Мастер 2"> 
+        <h2>Мария Петрова</h2> 
+        <p>Макияж</p> 
+    </div> 
+    <div class="master" > 
+        <img src="img/master4.jpg" alt="Мастер 4"> 
+        <h2>Анна Никитина</h2> 
+        <p>Стрижка, укладка</p> 
+    </div> 
+</div>
+
+
+
+</div>
+
+
+
+
+
+    <section class="portfolio" id="portfolio">        
+        <h2>Портфолио</h2>  
+        <div class="gallery">  
+            <img src="img/portfolio/2.jpg" alt="Маникюр 1" class="thumbnail">  
+            <img src="img/portfolio/15.jpg" alt="Маникюр 2" class="thumbnail">  
+            <img src="img/portfolio/8.jpg" alt="Маникюр 3" class="thumbnail">  
+            <img src="img/portfolio/4.jpg" alt="Маникюр 4" class="thumbnail">  
+            <img src="img/portfolio/13.jpg" alt="Маникюр 5" class="thumbnail">  
+            <img src="img/portfolio/11.jpg" alt="Маникюр 6" class="thumbnail">   
+            <div class="hidden-images" style="display: none;"> 
+                <img src="img/portfolio/м1.jpg" alt="Макияж1" class="thumbnail">  
+                <img src="img/portfolio/м2.jpg" alt="Макияж2" class="thumbnail">  
+                <img src="img/portfolio/м3.jpg" alt="Макияж3" class="thumbnail">  
+                <img src="img/portfolio/м4.jpg" alt="Макияж4" class="thumbnail">  
+                <img src="img/portfolio/м5.jpg" alt="Макияж5" class="thumbnail">  
+                <img src="img/portfolio/м6.jpg" alt="Макияж6" class="thumbnail"> <br> 
+                <img src="img/portfolio/п1.jpg" alt="Укладка1" class="thumbnail">
+                <img src="img/portfolio/п2.jpg" alt="Укладка2" class="thumbnail">
+                <img src="img/portfolio/п3.jpg" alt="Укладка3" class="thumbnail">
+                <img src="img/portfolio/п4.jpg" alt="Укладка4" class="thumbnail">
+                <img src="img/portfolio/п5.jpg" alt="Укладка5" class="thumbnail">
+                <img src="img/portfolio/п6.jpg" alt="Укладка6" class="thumbnail">
+            </div> 
+        </div>  
+        <div id="show-more" class="arrow-down"></div>
+     
+        <!-- Модальное окно для увеличенной картинки --> 
+        <div class="modal"> 
+            <span class="close">×</span> 
+            <img class="modal-content" id="fullImage"> 
+            <div id="caption"></div> 
+        </div> 
+    </section>
+    
+    
+
+    
+    <section id="form-group">
+        <div class="background-container">
+    <div class="form-container" > 
+        <script>
+            function validatePhone(input) {
+                const phoneInput = document.getElementById('phone');
+                const errorMessage = document.getElementById('phone-error');
+                // Обновленное регулярное выражение
+                const phonePattern = /^[+]?[0-9]*$/;
+        
+                if (!phonePattern.test(phoneInput.value)) {
+                    errorMessage.style.display = 'block';
+                    phoneInput.value = '';
+                } else {
+                    errorMessage.style.display = 'none';
+                }
+            }
+        </script>
+        
+        
+
+        
+        <h2>Записаться</h2> 
+        <form> 
+            <div class="form-group"> 
+                <label for="master">Выбор специалиста:</label> 
+                <select id="master" name="master"> 
+                    <option value="master1">Инна Иванова</option> 
+                    <option value="master2">Мария Петрова</option> 
+                    <option value="master3">Анна Никитина</option> 
+                </select> 
+            </div> 
+            <div class="form-group"> 
+                <label for="service">Выбор услуги:</label> 
+                <select id="service" name="service"> 
+                    <option value="classic">Маникюр</option> 
+                    <option value="hardware">Педикюр</option> 
+                    <option value="gel">Макияж</option> 
+                    <option value="design">Прическа</option> 
+                </select> 
+            </div> 
+            <div class="form-group"> 
+                <label for="date">Выбор даты:</label> 
+                <input type="date" id="date" name="date"> 
+            </div> 
+            <div class="form-group"> 
+                <label for="time">Выбор времени:</label> 
+                <select id="time" name="time">
+                    <option value="10:00">8:00</option>
+                    <option value="10:00">9:00</option> 
+                    <option value="10:00">10:00</option> 
+                    <option value="12:00">12:00</option> 
+                    <option value="14:00">14:00</option> 
+                    <option value="16:00">16:00</option> 
+                </select> 
+            </div> 
+            
+            <div class="form-group"> 
+                <label for="name">Имя:</label> 
+                <input type="text" id="name" name="name"> 
+            </div> 
+            <div class="form-group"> 
+                <label for="phone">Телефон:</label> 
+                <input type="tel" id="phone" name="phone" oninput="validatePhone(this)"> 
+                <span id="phone-error" class="error-message">Введите цифры</span>
+            </div> 
+            <div class="form-group"> 
+                <button type="button" onclick="showNotification()">Записаться</button> 
+                <div id="notification" class="notification" >Заявка отправлена!<br><br>На указанный номер придет sms с подтверждением записи.</div>
+            </div> 
+        </form> 
+    </div>
+    </div>
+</section>
+
+
+
+<script>
+    function showNotification() {
+        var notification = document.getElementById("notification");
+        notification.style.display = "flex";
+        setTimeout(function() {
+            notification.style.display = "none";
+        }, 3000); // Уведомление исчезнет через 3 секунды
+    }
+</script>
+
+
+<section id="contact">
+    <section id="contact" class="contact">
+        <h2>Контакты</h2>
+        <p>Телефон: +375 (29) 123-45-67</p>
+        <p>Email: BeautyStudio@example.com</p>
+        <p>Адрес: г. Минск, пр-т. Дзержинского, д. 19</p>
+    </section>
+    
+    <footer>
+        <p>© 2024 Студия маникюра "Beauty Studio". Все права защищены.</p>
+    </footer>
+</section>   
+
+        
+</body>
+<script>
+    // Получаем все миниатюры и модальное окно
+const thumbnails = document.querySelectorAll('.thumbnail');
+const modal = document.querySelector('.modal');
+const fullImage = document.getElementById('fullImage');
+const captionText = document.getElementById('caption');
+const closeBtn = document.querySelector('.close');
+
+// Добавляем обработчик событий для каждой миниатюры
+thumbnails.forEach(thumbnail => {
+thumbnail.addEventListener('click', function() {
+modal.style.display = "block"; // Показываем модальное окно
+fullImage.src = this.src; // Устанавливаем источник изображения
+captionText.innerHTML = this.alt; // Устанавливаем подпись
+});
+});
+
+// Обработчик для закрытия модального окна
+closeBtn.addEventListener('click', function() {
+modal.style.display = "none"; // Скрываем модальное окно
+});
+
+// Закрытие модального окна при клике вне изображения
+modal.addEventListener('click', function(event) {
+if (event.target === modal) {
+modal.style.display = "none"; // Скрываем модальное окно
+}
+});
+
+</script>
+
+
+<script>
+   document.getElementById('show-more').addEventListener('click', function() { 
+    const hiddenImages = document.querySelector('.hidden-images'); 
+    const isHidden = hiddenImages.style.display === 'none'; // Проверяем текущее состояние
+    
+    hiddenImages.style.display = isHidden ? 'block' : 'none'; 
+    this.className = isHidden ? 'arrow-up' : 'arrow-down'; // Меняем класс для стрелки
+});
+
+</script>
+
+
+
+<script>
+function openMasterInfo(name, services, prices) { 
+    document.getElementById('masterName').innerText = name; 
+    const servicesArray = services.split(', '); 
+    const pricesArray = prices.split(', '); 
+
+    let tableContent = ''; 
+    for (let i = 0; i < servicesArray.length; i++) { 
+        tableContent += `<tr>
+                            <td>${servicesArray[i]}</td> 
+                            <td>${pricesArray[i]}</td> 
+                         </tr>
+                         <tr><td colspan="2"><hr></td></tr>`; 
+    } 
+
+    document.getElementById('masterServicesTable').innerHTML = tableContent; 
+    document.getElementById('modal').style.display = 'flex'; 
+} 
+
+function closeModal() { 
+    document.getElementById('modal').style.display = 'none'; 
+}</script>
+
+</html>
