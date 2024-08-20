@@ -48,7 +48,7 @@ nav a:hover {
     position: relative; 
     width: 100%; 
     height: 700px; 
-    background-image: url("../img/banner01.png"); 
+    background-image: url("img/banner01.png"); 
     background-size: cover; 
     background-position: center; 
 }
@@ -213,7 +213,7 @@ h6{
 /*-------------портфолио------*/
 
 .portfolio{
-    background-image: url("../img/bg2.png");
+    background-image: url("/img/bg2.png");
     background-size: cover;
     margin: 0px;
     padding: 20px; /* Отступы вокруг формы */
